@@ -174,7 +174,7 @@ function showBoats() {
     }
 
     for (var i = 0; i < boats.length; i++) {
-
+        if(boats[i]) {
         Matter.Body.setVelocity(boats[i].body, {
           x: -0.9,
           y: 0
@@ -188,6 +188,7 @@ function showBoats() {
           pirateLaughSound.play();
           isLaughing = true;
           gameOver();
+        }
         }
       }
     }
